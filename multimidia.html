@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<html lang=pt-br>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimídia Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css\estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css\media.css">
+    <link rel="shortcut icon" href="/_imagens/glass.ico">
+</head>
+<body>
+
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2> A revolução do Google está chegando</h2>
+            </hgroup>
+
+
+            <img id="icone" src="_imagens/glass-oculos-preto-peq.png" />
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="square">
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto(id='_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto(id='_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto(id='_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto(id='_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto(id='_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticiaprincipal">
+                <header id="cabecalho-de-artigo">
+                    <hgroup>
+                        <h3>Glass --> Multimídia</h3>
+                        <h1>Sons e Vídeos</h1>
+                        <h2>&nbsp; by Rafael Falcão</h2>
+                        <h3 class="direita"> Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+                <div id="tv-radio">
+                    <audio id="musica" controls="controls">
+                        <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg" />
+                        <source src="_media/2009-lovers-carvings-bibio.aac" type="audio/x-aac" />
+                        <source src="_media/2009-lovers-carvings-bibio.ogg" type="audio/ogg" />
+                        Áudio Incompatível
+                    </audio>
+                    <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+                        <source src="_media/getting-started.mp4" type="video/mp4" />
+                        <source src="_media/getting-started.webm" type="video/webm" />
+                        <source src="_media/getting-started.ogv" type="video/ogg" />
+                        Vídeo Incompatível
+                    </video>
+                </div>
+            </article>
+        </section>
+        <footer id="rodape">
+            Copyright &copy; 2022 - by Rafael Falcão<br>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <a href="https://wa.me/+5521990608776" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+                <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+            </a>
+            <h3><a href="https://www.facebook.com" target="_blank">Facebook</a> |<a href="https://www.twitter.com" target="_blank"> Twitter</a> |<a href="https://www.instagram.com" target="_blank"> Instagram</a> </h3>
+        </footer>
+    </div>
+</body>
+</html>
