@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <script language="javascript" src="_javascript/funcoes.js"></script>
-<script>
-    function calc_total() {
-        var qntd = parseInt(document.getElementById('cQntd').value)
-        tot = qntd * 1500;
-        document.getElementById('cTot').value = tot;
-    }
-</script>
 <html lang=pt-br>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Contato</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css\reset.css">
     <link rel="stylesheet" type="text/css" href="_css\estilo.css">
     <link rel="stylesheet" type="text/css" href="_css\form.css">
     <link rel="shortcut icon" href="/_imagens/glass.ico">
 </head>
-    
+ 
 <body>
 <div id="interface">
     <header id="cabecalho">
     <hgroup>
-    <h1>Google Glass</h1>
-    <h2> A revolução do Google está chegando</h2>
+    <h1> A revolução do Google está chegando</h1>
     </hgroup>
     
     
@@ -42,15 +36,12 @@
     <article id="noticiaprincipal">
         <header id="cabecalho-de-artigo">
             <hgroup>
-                <h3>Fale Conosco --> Contato</h3>
                 <h1>Formulário de Contato</h1>
-                <h2>&nbsp; By Rafael Falcão</h2>
-                <h3 class="direita">Atualizado em 04/01/2022</h3>
             </hgroup>     
         </header>    
     </article>
 </section>
-<form method="post" id="fContato" action:"mailto:rfmfalcao@gmail.com" oninput="calc_total();">
+<form method="get" id="fContato" action:"." oninput="calc_total();">
     <fieldset id="usuario">
         <legend>Identificação do Usuário</legend>
         <p><label for="cNome" Nome></label>Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo" /></p>
@@ -64,58 +55,34 @@
         </fieldset>
         <p><label for="cNasc" Data de Nascimento></label> Data de Nascimento:<input type="date" name="tNasc" id="cNasc" /></p>
     </fieldset>
-
-    <fieldset id="endereco">
-        <legend>Endereço do Usuário</legend>
-        <p><label for="cRua" Logradouro></label>Logradouro:<input type="text" name="tRua" id="cRua" size="20" maxlength="30" placeholder="Digite aqui sua Rua" /></p>
-        <p><label for="cN" Número></label>Número:<input type="number" name="tN" id="cN" min="0" max="99999" placeholder="Nº" /></p>
-        <p>
-            <label for="cEstado" Estado></label>Estado:
-            <select id="tEstado" name="cEstado">
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP" selected>São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-                <option value="EX">Estrangeiro</option>
-            </select>
-        </p>
-        <p><label for="cCid" Cidade></label>Cidade:<input type="text" name="tCid" id="cCid" size="30" maxlength="30" placeholder="Digite aqui sua Cidade" /></p>
-
-    </fieldset>
-
+        <fieldset id="endereco">
+            <legend>Endereço do Usuário</legend>
+            <label>Cep:
+                <input name="cep" type="text" id="cep" value="" size="22" maxlength="9" placeholder="Digite o CEP e pressione tab!"
+                       onblur="pesquisacep(this.value);" /></label><br />
+                <label>Rua:
+                <input name="rua" type="text" id="rua" size="20" /></label><br />
+                <label>Número:
+                <input name="num" type="number" id="num" size="2" /></label><br />
+                <label>Bairro:
+                <input name="bairro" type="text" id="bairro" size="20" /></label><br />
+                <label>Cidade:
+                <input name="cidade" type="text" id="cidade" size="20" /></label><br />
+                <label>Estado:
+                <input name="uf" type="text" id="uf" size="2" /></label><br />
+                <label>
+                <input name="ibge" type="text" id="ibge" size="8" /></label><br />    
+        </fieldset>
     <fieldset id="mensagem">
         <legend>Mensagem do Usuário</legend>
         <p><label for="cUrg" Grau de Urgência></label>Grau de Urgência:<input type="range" name="tUrg" id="cUrg" min="0" max="10" /></p>
         <p>
             <label for=cMsg Mensagem></label>Mensagem:
-            <textarea name="tMsg" id="cMsg" cols="20" rows="1"></textarea>
+            <textarea name="tMsg" id="cMsg" cols="20" rows="4"></textarea>
         </p>
     </fieldset>
 
-    <fieldset id="mensagem">
+    <fieldset id="quero">
         <legend>Quero um Google Glass</legend>
         <p>
             <input type="checkbox" name="cPed" id="cPed" checked />

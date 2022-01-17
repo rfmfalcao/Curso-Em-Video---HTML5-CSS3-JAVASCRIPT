@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<html lang=pt-br>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" type="text/css" href="_css\estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css\form.css">
+    <link rel="shortcut icon" href="/_imagens/glass.ico">
+</head>
+    
+<body>
+<div id="interface">
+    <header id="cabecalho">
+    <hgroup>
+    <h1>Google Glass</h1>
+    <h2> A revolução do Google está chegando</h2>
+    </hgroup>
+    
+    
+    <img id="icone" src="_imagens/contato.png"/> 
+    <nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="square">
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto(id='_imagens/contato.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto(id='_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto(id='_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto(id='_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto(id='_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+    </nav>
+</header>
+<section id="corpo-full">
+    <article id="noticiaprincipal">
+        <header id="cabecalho-de-artigo">
+            <hgroup>
+                <h3>Fale Conosco --> Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>&nbsp; By Rafael Falcão</h2>
+                <h3 class="direita">Atualizado em 04/01/2022</h3>
+            </hgroup>     
+        </header>    
+    </article>
+</section>
+<form method="post" id="fContato" action:"mailto:rfmfalcao@gmail.com">
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+        <p><label for="cNome" Nome></label>Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+        <p><label for="cSenha" Senha></label>Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 caracteres"/></p>
+        <p><label for="cEmail" E-mail></label>E-mail: <input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" /></p>
+    
+        <fieldset id="sexo">
+            <legend>Sexo:</legend>
+            <input type="radio" name="tSexo" id="cMasc" /> <label for="cMasc" Masculino>Masculino</label><br />
+            <input type="radio" name="tSexo" id="cFem" /> <label for="cfem" Feminino>Feminino</label>
+        </fieldset>
+        <p><label for="cNasc" Data de Nascimento></label> Data de Nascimento:<input type="date" name="tNasc" id="cNasc" /></p>
+    </fieldset>
+
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+        <p><label for="cRua" Logradouro></label>Logradouro:<input type="text" name="tRua" id="cRua" size="30" maxlength="30" placeholder="Digite aqui sua Rua"/></p>
+        <p><label for="cN" Número></label>Número:<input type="number" name="tN" id="cN" min="0" max="99999" placeholder="Nº" /></p>
+        <p>
+            <label for="cEstado" Estado></label>Estado:
+            <select id="tEstado" name="cEstado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP" selected>São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+            </select>
+        </p>
+        <p><label for="cCid" Cidade></label>Cidade:<input type="text" name="tCid" id="cCid" size="30" maxlength="30" placeholder="Digite aqui sua Cidade"/></p>
+        
+    </fieldset>
+
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+        <p><label for="cUrg" Grau de Urgência></label>Grau de Urgência:<input type="range" name="tUrg" id="cUrg" min="0" max="10"/></p>
+        <p><label for=cMsg Mensagem></label>Mensagem:
+        <textarea name="tMsg" id="cMsg" cols="45" rows="1"></textarea></p>
+</fieldset>
+
+    <fieldset id="mensagem">
+        <legend>Quero um Google Glass</legend>
+        <p><label for="cGostaria" Gostaria de adquirir um Google Glass quando disponível></label>Gostaria de adquirir um Google Glass quando disponível</p>
+        <p><label for="cCor" Cor></label>"Cor:</p>
+        <p><label for="cQntd" Quantidade></label>Quantidade:</p>
+        <p><label for="cTot" Preço Total></label>Preço Total: R$</p>
+    </fieldset>
+
+</form>
+
+[BOTÃO ENVIAR]
+<footer id="rodape">Copyright &copy; 2022 - by Rafael Falcão<br>
+    <h3>Facebook | Twitter | Instagram </h3>
+</footer>
+</div>
+</body>
+</html>
