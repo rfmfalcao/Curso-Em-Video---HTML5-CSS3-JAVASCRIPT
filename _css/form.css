@@ -3,6 +3,7 @@
 form {
     width:500px;
     margin: auto;
+    border-radius: 4px;
 }
 
 input, textarea {
@@ -16,16 +17,17 @@ input:hover, textarea:hover {
     background-color: #dddddd;
 }
 
-legends {
-    color: #888888;
+legend {
+    color: rgba(0, 0, 214, 0.8);
     font-weight: bold; 
     font-size: 13pt;
     font-family: sans-serif;
 }
 
 fieldset {
-    border-color: #cecece;
     margin: 20px; 
+    border: 1px solid rgba(0, 0, 214, 0.8);
+    border-radius: 2px;
 }
 
 fieldset#sexo {
@@ -34,21 +36,26 @@ fieldset#sexo {
 }
 
 fieldset#usuario{
-    background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+    background: url("../_imagens/icone-contato.png") no-repeat 85% 85%;
 }
 
 fieldset#endereco {
-    background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
-}
-
-fieldset#endereco {
-    background: url("../_imagens/icone-endereço.png") no-repeat 95% 95%;
+    background: url("../_imagens/icone-endereco.png") no-repeat 85% 85%;
 }
 
 fieldset#mensagem {
-    background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+    background: url("../_imagens/icone-mensagem.png") no-repeat 85% 85%;
 }
 
-fieldset#pedido {
-    background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+fieldset#quero {
+    background: url("../_imagens/icone-pagamento.png") no-repeat 85% 85%;
+}
+
+label#ibge {
+    display: hidden;
+}
+
+#ibge {
+    display: none;
+    display: hidden;
 }

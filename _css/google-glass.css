@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    font-size: 10pt;
+    overflow-x: hidden;
+    overflow-y: hidden;
+ }
+ 
+ p {
+    text-align: justify;
+    text-indent: 2%;
+ }
+     
+ article h1 {
+    font-size: 15pt;
+    color: #ffffff;
+    background-color: rgba(0, 0, 214, 0.8);
+    border-radius: 4px;
+    padding: 1%;
+    margin: 0%;
+ }
+ 
+ article h2 {
+    font-size: 13pt;
+    color: #888888;
+    margin: 0%;
+ }
+ 
+ article {
+    margin-bottom: 300%;
+ }
+ 
+ img.direita {
+    display: block;
+    float: right;
+    margin-left: 1%;
+ }

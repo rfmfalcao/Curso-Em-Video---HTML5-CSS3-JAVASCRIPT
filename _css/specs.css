@@ -10,14 +10,22 @@ section#conteudo {
     margin: auto;
 }
 
+img {
+    border-radius: 6px;
+    border: 4px rgba(0, 0, 214, 0.8) solid;
+    margin: 1%;
+}
 
 iframe#frame-specs {
+    margin: auto;
+    display: inline-block;
     border: none;
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 380px;
-    height: 280px;
+    width: 40%;
+    height: 80%;
+    top: 25%;
 }
 
 iframe#frame-specs::-webkit-scrollbar {
